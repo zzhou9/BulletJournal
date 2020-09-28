@@ -1,0 +1,24 @@
+@import (reference) '../pages.style.less';
+
+.task-status-page {
+  position: relative;
+  .pages-property(unset);
+
+  .task-operation {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  .task-operation > div {
+    margin-left: 0.5em;
+    cursor: pointer;
+  }
+
+  .task-operation > span {
+    margin-left: 0.5em;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}

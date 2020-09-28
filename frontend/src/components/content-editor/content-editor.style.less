@@ -1,0 +1,53 @@
+.file-upload-button {
+  box-sizing: border-box;
+  min-width: 36px;
+  padding: 0 8px;
+  background-color: transparent;
+  border: none;
+  color: #6a6f7b;
+  font-size: 14px;
+}
+
+.content-in-drawer {
+  padding: 2em 3em 4em 3em;
+  & img {
+    max-width: 100%;
+  }
+}
+
+.content-editor {
+  height: 100%;
+  padding: 3rem 3rem;
+
+  & > button {
+    margin-top: 1rem;
+    display: block;
+  }
+  .ql-toolbar {
+    width: 100%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .quill {
+    height: 95%;
+    flex: 1;
+    padding-bottom: 1rem;
+
+    .ql-container {
+      height: 95%;
+      max-height: 95%;
+      width: 100%;
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+
+      .ql-editor {
+        height: 100%;
+        overflow-y: scroll;
+      }
+    }
+  }
+}

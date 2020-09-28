@@ -1,0 +1,78 @@
+.project-item {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+
+  .project-item-content {
+    .project-item-name {
+      font-size: 15px;
+      font-weight: 600;
+      padding-right: 1em;
+    }
+    .project-item-subs {
+      display: flex;
+      align-items: baseline;
+      .project-item-labels {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .project-item-time {
+        font-size: 14px;
+        color: #c0c1c0;
+        display: flex;
+      }
+    }
+  }
+
+  .project-control {
+    max-width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .project-item-owner {
+      max-height: 20px;
+    }
+    .project-item-assignee {
+      margin-right: 3px;
+    }
+    .project-control-more {
+      font-weight: bold;
+      margin-left: 1em;
+      font-size: 20px;
+    }
+  }
+}
+
+.transaction-item-income {
+  padding-left: 6px;
+  font-size: 18px;
+  color: #13c2c2;
+}
+
+.transaction-item-expense {
+  padding-left: 6px;
+  font-size: 18px;
+  color: #d9363e;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
+
+.item-tag {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.task-assignees {
+  max-width: 360px;
+
+  & span {
+    padding: 2px;
+  }
+}

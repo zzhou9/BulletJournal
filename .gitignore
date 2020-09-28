@@ -1,0 +1,6 @@
+.metadata/*
+.vscode/*
+.idea/*
+**/.DS_Store
+discourse-auth-proxy/.idea
+auth-proxy/.idea

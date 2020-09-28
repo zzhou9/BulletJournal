@@ -1,0 +1,89 @@
+@import (reference) '../pages.style.less';
+
+.transaction-page {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  .transaction-display {
+    width: 100%;
+    height: 170px;
+    border-radius: 8px;
+    box-shadow: 0 0 9px 6px rgba(0, 0, 0, 0.11);
+    // setting the basic backgoud of carousel in this
+    .ant-carousel {
+      height: 100%;
+      line-height: 90px;
+      // add style of subdiv style here
+      .slick-dots li button {
+        background: #808080;
+        opacity: 1;
+      }
+      .slick-dots li.slick-active button {
+        background: #d3d3d3;
+      }
+    }
+  }
+
+  .transaction-display-mini {
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: 0 0 9px 6px rgba(0, 0, 0, 0.11);
+    // setting the basic backgoud of carousel in this
+    .ant-carousel {
+      height: 100%;
+      line-height: 80px;
+
+      .transaction-display-mini-content {
+        width: auto;
+        display: flex !important;
+        justify-content: space-around;
+
+        .title {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .transaction-visual {
+    margin: 1.5em 0;
+    width: 100%;
+    border-radius: 8px;
+    padding: 1em 0;
+    box-shadow: 0 0 9px 6px rgba(0, 0, 0, 0.11);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .transaction-graph {
+      width: 100%;
+      height: 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .transaction-control {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+  }
+
+  .transaction-list {
+    .transaction-list-item:hover {
+      background: #eeeeee;
+    }
+  }
+
+  // add other part of transaction page style over here
+}
+
+div.add-transaction-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

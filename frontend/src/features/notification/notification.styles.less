@@ -1,0 +1,33 @@
+.notifications {
+    font-size: 16px;
+}
+
+.notification-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.notifications-list {
+  height: 300px;
+  overflow-y: auto;
+  width: 400px;
+
+  &::-webkit-scrollbar {
+    width: 0.1em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #f78cba;
+  }
+}
+
+.notification-operation {
+  font-size: 16px;
+  display: flex;
+  width: 100px;
+  justify-content: space-evenly;
+}
+
+span.remove-notifications-button {
+  cursor: pointer;
+}

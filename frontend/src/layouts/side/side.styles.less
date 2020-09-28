@@ -1,0 +1,48 @@
+@import '../../styles/vars.less';
+
+.sider {
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed !important;
+  box-shadow: 5px 0px 6px -6px rgb(104, 103, 103);
+
+  .sider-header {
+    height: 50px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .title {
+      height: 100%;
+      line-height: 55px;
+      margin-left: 1rem;
+
+      h2 {
+        font-family: 'Pacifico';
+        color: darken(@primary-color, 20%);
+      }
+    }
+
+    .icon-img {
+      height: 40px;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.2em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: @primary-color;
+  }
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & .group-name {
+    margin-left: 5px;
+  }
+}

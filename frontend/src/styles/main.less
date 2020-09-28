@@ -1,0 +1,298 @@
+@import '~antd/dist/antd.less';
+@link-color: darken(@primary-color, 15%);
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+}
+
+.App {
+  height: 100vh;
+}
+
+.layout {
+  min-height: 100%;
+}
+
+/* ----------------------Header ---------------------- */
+.header {
+  background: @primary-color;
+
+  padding: 0 15px 0 30px;
+  height: 50px;
+  line-height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* ----------------------Footer ---------------------- */
+.footer {
+  background: @layout-header-background;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ----------------------search bar---------------------- */
+.search-box {
+  width: 100%;
+
+  input {
+    border-radius: 0 !important;
+  }
+}
+
+//used for extend search bar when focused
+.search-box {
+  //search bar default width
+  .ant-input-search {
+    width: 60%;
+  }
+}
+
+.search-box .ant-input {
+  background: white;
+  border-radius: 15px;
+}
+
+.search-box .ant-input:hover {
+  outline: none;
+}
+
+.search-box .ant-input:focus {
+  outline-color: @primary-color;
+  background: white;
+}
+
+.header-icon {
+  width: 200px;
+}
+/* ----------------------Body---------------------- */
+.content {
+  background: @layout-header-background;
+  height: 95%;
+}
+
+.ant-popover-message {
+  max-width: 180px;
+}
+
+.draggable-projects {
+  padding-left: 48px;
+}
+
+.popover-control-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-item-has-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sub-tag-list {
+  display: flex;
+  align-items: center;
+}
+
+/* ----------------------Sider---------------------- */
+
+.sider {
+  height: 100vh;
+  overflow-y: auto;
+  background: @layout-header-background;
+  position: fixed !important;
+  box-shadow: 5px 0px 6px -6px rgb(104, 103, 103);
+
+  .sider-header {
+    height: 50px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .title {
+      height: 100%;
+      line-height: 55px;
+      margin-left: 1rem;
+
+      h2 {
+        color: @primary-color;
+      }
+    }
+
+    .icon-img {
+      height: 40px;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.2em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: @primary-color;
+  }
+}
+
+/* ----------------------Group Card---------------------- */
+.group-card {
+  background: @layout-header-background;
+  margin: 5vh 2vw 5vh 2vw;
+  width: 380px;
+  min-height: 300px;
+  padding: 1vh 2vw 0 2vw;
+  &.multiple {
+    height: 40vh;
+  }
+  max-height: 66vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08),
+    0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+  .group-title {
+    color: @primary-color;
+    height: 40px;
+    border-bottom: 1px solid #e0e6ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .group-operation .group-setting {
+      text-align: right;
+      padding: 0;
+      margin-left: 14px;
+      color: @primary-color;
+    }
+  }
+  .group-users {
+    flex-grow: 1;
+    overflow-y: auto;
+
+    .group-user {
+      display: flex;
+      align-items: baseline;
+      .group-user-info {
+        margin-left: 0.5rem;
+      }
+      .ant-typography-edit-content {
+        margin: 0;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  .group-users .user-item {
+    height: 52px;
+    width: 100%;
+    padding: 10px 10px;
+    border-bottom: 1px solid #e0e6ed;
+  }
+
+  .group-card-footer {
+    display: flex;
+    justify-content: space-evenly;
+
+    .group-card-footer-filter {
+      margin-top: 8px;
+      margin-left: 5px;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .group-footer {
+    background-origin: 0 -1rem rgba(66, 66, 66, 0.7);
+    padding: 0.5rem 0;
+  }
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & .group-name {
+    margin-left: 5px;
+  }
+}
+
+/* ----------------------Big Calendar---------------------- */
+.rbc-event {
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  padding: 2px 5px;
+  background-color: @primary-color;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  &:focus {
+    outline: 5px auto #3b99fc;
+  }
+}
+.rbc-event.rbc-selected {
+  background-color: @primary-color;
+}
+
+.rbc-title h2 {
+  text-align: center;
+  color: @primary-color;
+  font-size: 18px;
+}
+
+/* ------------------ Token Page -----------------------------*/
+.token-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  width: 100%;
+
+  & > h4 {
+    font-size: 24px;
+    font-family: 'Pacifico';
+  }
+  & > a {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+}
+
+.ql-toolbar {
+  background: lighten(@primary-color, 40%);
+}
+
+/* ------------------ Side Menu Slider -----------------------------*/
+
+div#sideMenuSlider {
+  position: fixed;
+  width: 21px;
+  height: 21px;
+  top: 45%;
+  left: 246px; // side menu width is 249px
+
+  .anticon {
+    font-size: 22px;
+    cursor: move;
+    z-index: 999999;
+    color: @primary-color;
+  }
+}

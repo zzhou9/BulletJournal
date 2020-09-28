@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package services;
+
+import "daemon/grpc/types/join_group_events.proto";
+import "daemon/grpc/types/subscribe_notification.proto";
+import "daemon/grpc/types/health.proto";
+import "google/api/annotations.proto";
+
+option go_package = "github.com/singerdmx/BulletJournal/protobuf/daemon/grpc/services";
+option java_multiple_files = true;
+option java_package = "com.bulletjournal.protobuf.daemon.grpc.services";
+option java_outer_classname = "DaemonProto";
+
+// The daemon service definition.
+service Daemon {
+
+  // Serve rpc call sending JoinGroupEvents
+  rpc JoinGroupEvents (types.JoinGroupEvents) returns (types.ReplyMessage) {}
+
+  // Serve rpc call to subscribe server side streaming
+  rpc SubscribeNotification (types.SubscribeNotification) returns (stream types.StreamMessage) {}
+
+  // Serve rest call
+  rpc Rest (types.JoinGroupEvents) returns (types.ReplyMessage) {
+     option (google.api.http) = {
+          post: "/daemon"
+          body: "*"
+     };
+  }
+
+  // Serve rpc / rest call to health check
+  rpc HealthCheck (types.HealthCheckRequest) returns (types.HealthCheckResponse) {
+    option (google.api.http) = {
+          get: "/daemon/healthcheck"
+    };
+  }
+}
